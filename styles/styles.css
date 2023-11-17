@@ -47,7 +47,7 @@ header .navbar ul {
   
   
   
-  @media (min-width: 375px) {
+  @media (max-width: 375px) {
     .col-sm-8 {
       flex: 0 0 66.67%;
     }
@@ -62,10 +62,13 @@ header .navbar ul {
     .col-sm-4 {
       flex: 0 0 33.33%;
     }
+    .col-sm-none{
+        display: none!important;
+      }
   }
   
   
-  @media (min-width: 834px) {
+  @media ((min-width: 375px) and (max-width: 834px)) {
     .col-md-8 {
       flex: 0 0 66.67%;
     }
@@ -92,10 +95,13 @@ header .navbar ul {
     .col-md-12 {
       flex: 0 0 100%;
     }
+    .col-md-none{
+        display: none!important;
+      }
   }
   
   /* For extra-large screens (e.g., desktops) */
-  @media (min-width: 1440px) {
+  @media (min-width: 835px) {
     .col-lg-8 {
       flex: 0 0 66.67%;
     }
@@ -123,7 +129,7 @@ header .navbar ul {
       flex: 0 0 100%;
     }
     .col-lg-none{
-      display: none;
+      display: none!important;
     }
   }
   
@@ -295,7 +301,7 @@ header .navbar ul {
   
     /****************** START HEADER ******************/
     header .banner-area{
-      background-image: url("images/cover.jpg");
+      background-image: url("../images/cover.jpg");
       background-size: cover;
       width: 100%;
     }
@@ -451,7 +457,7 @@ header .navbar ul {
         .navbar-area{
           background-color: #FFF;
         }
-        .navbar-area > div.flex.justify-between{
+        .navbar-area > div{
           max-width: 90%;
           margin: auto;
         }
