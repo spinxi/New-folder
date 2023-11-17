@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<style>
+
+
+
+header .navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+header .navbar li {
+  float: left;
+}
+
+header .navbar li a {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal; 
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Grid system */
+
+.container {
+  width: 100%;
+}
+.content {
+  max-width: 1440px;
+  margin: 0 130px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+  padding: 10px;
+}
+
+
+
+@media (min-width: 375px) {
+  .col-sm-8 {
+    flex: 0 0 66.67%;
+  }
+
+  .col-sm-6 {
+    flex: 0 0 50%;
+  }
+
+  .col-sm-12 {
+    flex: 0 0 100%;
+  }
+  .col-sm-4 {
+    flex: 0 0 33.33%;
+  }
+}
+
+
+@media (min-width: 834px) {
+  .col-md-8 {
+    flex: 0 0 66.67%;
+  }
+
+  .col-md-4 {
+    flex: 0 0 33.33%;
+  }
+
+  .col-md-6 {
+    flex: 0 0 50%;
+  }
+
+  .col-md-3 {
+    flex: 0 0 25%;
+  }
+
+  .col-md-2 {
+    flex: 0 0 16.67%;
+  }
+
+  .col-md-1 {
+    flex: 0 0 8.33%;
+  }
+  .col-md-12 {
+    flex: 0 0 100%;
+  }
+}
+
+/* For extra-large screens (e.g., desktops) */
+@media (min-width: 1440px) {
+  .col-lg-8 {
+    flex: 0 0 66.67%;
+  }
+
+  .col-lg-4 {
+    flex: 0 0 33.33%;
+  }
+
+  .col-lg-6 {
+    flex: 0 0 50%;
+  }
+
+  .col-lg-3 {
+    flex: 0 0 25%;
+  }
+
+  .col-lg-2 {
+    flex: 0 0 16.67%;
+  }
+
+  .col-lg-1 {
+    flex: 0 0 8.33%;
+  }
+  .col-lg-12 {
+    flex: 0 0 100%;
+  }
+  .col-lg-none{
+    display: none;
+  }
+}
+
+
+
+
+
+/****************** margin && padding ******************/
+.m-0{
+    margin: 0;
+}
+.p-0{
+    padding: 0;
+}
+.pt-36{
+    padding-top: 36px;
+}
+.pb-36{
+    padding-bottom: 36px;
+}
+.pr-30{
+    padding-right: 30px;
+}
+.p-30{
+  padding: 30px;
+}
+.ms-16{
+    margin-left: 16px;
+}
+.mt-5{
+    margin-top: 5px;
+}
+.mt-20{
+  margin-top: 20px;
+}
+.ptb-10{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.mr-20{
+  margin-right: 20px;
+}
+.mb-80{
+  margin-bottom: 86px;
+}
+.mt-8{
+  margin-top: 8px;
+}
+.mt-70{
+  margin-top: 70px;
+}
+.me-16{
+    margin-right: 16px;
+}
+.mtb-34{
+  margin-top: 34px;
+  margin-bottom: 34px;
+}
+.ptb-120{
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+
+/****************** END margin && padding ******************/
+
+
+
+/****************** TEXTS ******************/
+.text-header{
+    color: #000;
+    font-family: Kanit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+}
+.text-content{
+    color: #000;
+    font-family: Kanit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    
+}
+.h1.heading{
+    color: #000;
+    font-family: Kanit;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.blog-text{
+    
+    margin: 18px 20px;
+}
+/****************** END TEXTS ******************/
+
+
+/****************** START FOOTER ******************/
+
+footer{
+  background-color: #000;
+}
+footer .footer-text{
+  color: #FFF;
+  font-family: Pridi;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+footer .flex-justify-center{
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+footer .align-center{
+  align-self: center;
+}
+/****************** END FOOTER ******************/
+
+/* I will do gridding in Blog */
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.card-list .card-item {
+    border: 1px solid black;
+    cursor: pointer;
+}
+.card-list .card-item .blog-image{
+    height: 190px;
+    width: 100%;
+    object-fit: cover;
+}
+@media (max-width: 834px) {
+    .content{
+        margin: 0 5%;
+    }
+    .card-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 375px) {
+    .content{
+        margin: 0 5%;
+    }
+    .card-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+@media (max-width: 834px) {
+  .d-none-small {
+    display: none;
+  }
+}
+
+
+
+  /****************** START HEADER ******************/
+  header .banner-area{
+    background-image: url("images/cover.jpg");
+    background-size: cover;
+    width: 100%;
+  }
+  header .banner-area .left-side .left-heading{
+    color: #FFF;
+    font-family: Kanit;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  header .banner-area .left-side .left-heading{
+    color: #FFF;
+    font-family: Kanit;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  header .banner-area .left-side .left-content{
+    color: #FFF;
+    font-family: Kanit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  header .banner-area .left-side .line{
+    width: 100%;
+    height: 1px; 
+    background: #fff; 
+  }
+  .card-slider{
+    background-color: #fff;
+    width: 440px; 
+    
+  }
+  .card-slider .news-heading {
+    color: #000;
+    font-family: Kanit;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal; 
+  }
+  .card-slider .line{
+    width: 100%;
+    height: 1px; 
+    background: #000; 
+  }
+  .card-slider .blog-title{
+    color: #FA793C;
+    font-family: Kanit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+  }
+  .card-slider .blog-content{
+    color: #000;
+    font-family: Kanit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+  }
+
+
+  .card-slider .flex{
+    align-self: stretch;
+    display: flex;
+    justify-content: space-between;
+    gap: 19px;
+  }
+
+  .card-slider .flex .align-center{
+    align-self: center;
+  }
+
+  .flex{
+    display: flex;
+    gap: 20px;
+  }
+  .justify-between{
+    justify-content: space-between;
+  }
+
+  .line{
+    width: 100%;
+    height: 1px;
+    background: #000;
+  }
+  /****************** END HEADER ******************/
+
+/* photo area  */
+.flex-column{
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .photo-area .card{
+        border: 1px solid #000;
+      }
+      .photo-area .card img{
+        height: 190px;
+        width: 100%;
+        object-fit: cover;
+      }
+      .photo-area .card .photo-text{
+        padding: 20px;
+      }
+      .photo-area .left-content-photo{
+        flex-direction: column;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        min-height: 400px;
+        gap: 50px;
+        width: 100%;
+      }
+
+      .photo-area .left-content-photo .heading{
+        position: relative;
+        color: #fff;
+        margin-top: 195px;
+        margin-left:20px;
+        white-space: nowrap;
+        font: 500 30px/45px Kanit, sans-serif;
+      }
+      .photo-area .left-content-photo .text{
+        position: relative;
+        color: #fff;
+        margin: 20px;
+
+        font: 400 16px/24px Kanit, sans-serif;
+      }
+      .photo-area .left-content-photo img{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        
+      }
+      .gap{
+        gap: 20px;
+      }
+
+
+
+      /* navbar area  */
+      .navbar-area{
+        background-color: #FFF;
+      }
+      .navbar-area > div.flex.justify-between{
+        max-width: 90%;
+        margin: auto;
+      }
+      .navbar-area .logo-text{
+        align-self: center;
+        color: #FA793C;
+        font-family: Pridi;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .navbar-menu{
+        color: #000;
+        font-family: ABeeZee;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-right: 10px;
+        align-self: center;
+      }
+      .navbar-area .flex svg{
+        align-self: center;
+      }
+</style>
+
+
+<body class="container">
+    <header>
+      <div class="navbar-area ptb-10">
+        <div class="flex justify-between">
+          <div class="flex">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24.2408 29.925C22.7208 31.5083 20.9791 33.1392 19 34.8333C10.5608 27.6292 6.33331 21.4067 6.33331 16.15C6.33331 8.26499 12.35 3.16666 19 3.16666C25.3333 3.16666 31.0966 7.78999 31.6191 15.0417H37.2083L30.0833 22.1667L22.9583 15.0417H28.4525C27.9458 9.87999 23.9558 6.33332 19 6.33332C13.6958 6.33332 9.49998 10.4025 9.49998 16.15C9.49998 19.855 12.5875 24.7633 19 30.6217C20.0133 29.6875 20.9475 28.785 21.8025 27.9142C21.5239 27.3644 21.3775 26.7572 21.375 26.1408C21.375 25.091 21.792 24.0842 22.5343 23.3419C23.2767 22.5995 24.2835 22.1825 25.3333 22.1825C26.3831 22.1825 27.3899 22.5995 28.1323 23.3419C28.8746 24.0842 29.2916 25.091 29.2916 26.1408C29.2911 26.7531 29.1481 27.3568 28.8739 27.9043C28.5996 28.4517 28.2018 28.9279 27.7118 29.295C27.2218 29.6621 26.6531 29.9101 26.0506 30.0195C25.4482 30.1288 24.8286 30.0965 24.2408 29.925Z" fill="#FA793C"/>
+            </svg> 
+            <p class="logo-text">Travel Day.com</p>
+          </div>
+          <div class="flex">
+            <div class="flex">
+              <p class="navbar-menu">Home</p>
+              <p class="navbar-menu">Discover</p>
+              <p class="navbar-menu">Photo</p>
+              <p class="navbar-menu mr-20">Contact</p>
+            </div>
+            
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 19.2C9.5 19.2 7.29 17.92 6 16C6.03 14 10 12.9 12 12.9C14 12.9 17.97 14 18 16C17.3389 16.9844 16.4459 17.7912 15.3996 18.3492C14.3533 18.9072 13.1858 19.1994 12 19.2ZM12 5C12.7956 5 13.5587 5.31607 14.1213 5.87868C14.6839 6.44129 15 7.20435 15 8C15 8.79565 14.6839 9.55871 14.1213 10.1213C13.5587 10.6839 12.7956 11 12 11C11.2044 11 10.4413 10.6839 9.87868 10.1213C9.31607 9.55871 9 8.79565 9 8C9 7.20435 9.31607 6.44129 9.87868 5.87868C10.4413 5.31607 11.2044 5 12 5ZM12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 6.47 17.5 2 12 2Z" fill="black"/>
+            </svg> 
+          </div>
+        </div>
+      </div>
+
+
+      <div class="banner-area">
+        <div class="content row justify-between ptb-120">
+
+        
+          <div class="left-side col-md-6">
+            <p class="left-heading">
+              TRAVEL NEWS
+            </p>
+            <div class="line mt-8"></div>
+            <p class="left-content mt-20">
+              Lorem ipsum dolor sit amet consectetur. 
+              Lectus diam turpis condimentum convallis in. 
+              Ac lorem cras laoreet proin suscipit tempor nibh fermentum. 
+              Quisque varius sit elit placerat nulla ullamcorper eget. 
+              Lobortis semper nec augue sed aliquam. In eget mattis dui arcu mauris blandit. 
+              Elementum neque magna vestibulum amet sagittis vel.
+            </p>
+          </div>
+          <div class="card-slider p-30 col-md-4 d-none-small">
+            <div class="flex">
+              <p class="news-heading">
+                MORE NEWS
+              </p>
+    
+              <div class="align-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.325 15.325C11.5083 15.5083 11.7377 15.5957 12.013 15.587C12.2877 15.579 12.5167 15.4833 12.7 15.3C12.8833 15.1167 12.975 14.8833 12.975 14.6C12.975 14.3167 12.8833 14.0833 12.7 13.9L11.8 13H15.025C15.3083 13 15.5417 12.904 15.725 12.712C15.9083 12.5207 16 12.2833 16 12C16 11.7167 15.9043 11.479 15.713 11.287C15.521 11.0957 15.2833 11 15 11H11.8L12.725 10.075C12.9083 9.89167 12.996 9.66233 12.988 9.387C12.9793 9.11233 12.8833 8.88333 12.7 8.7C12.5167 8.51667 12.2833 8.425 12 8.425C11.7167 8.425 11.4833 8.51667 11.3 8.7L8.7 11.3C8.5 11.5 8.4 11.7333 8.4 12C8.4 12.2667 8.5 12.5 8.7 12.7L11.325 15.325ZM12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM12 20C14.2167 20 16.1043 19.221 17.663 17.663C19.221 16.1043 20 14.2167 20 12C20 9.78333 19.221 7.89567 17.663 6.337C16.1043 4.779 14.2167 4 12 4C9.78333 4 7.896 4.779 6.338 6.337C4.77933 7.89567 4 9.78333 4 12C4 14.2167 4.77933 16.1043 6.338 17.663C7.896 19.221 9.78333 20 12 20Z" fill="#787878"/>
+                </svg>
+    
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.7 15.3L15.3 12.7C15.4833 12.5167 15.575 12.2833 15.575 12C15.575 11.7167 15.4833 11.4833 15.3 11.3L12.675 8.675C12.4917 8.49167 12.2627 8.404 11.988 8.412C11.7127 8.42067 11.4833 8.51667 11.3 8.7C11.1167 8.88333 11.025 9.11667 11.025 9.4C11.025 9.68333 11.1167 9.91667 11.3 10.1L12.2 11H8.975C8.69167 11 8.45833 11.0957 8.275 11.287C8.09167 11.479 8 11.7167 8 12C8 12.2833 8.096 12.5207 8.288 12.712C8.47933 12.904 8.71667 13 9 13H12.2L11.275 13.925C11.0917 14.1083 11.004 14.3377 11.012 14.613C11.0207 14.8877 11.1167 15.1167 11.3 15.3C11.4833 15.4833 11.7167 15.575 12 15.575C12.2833 15.575 12.5167 15.4833 12.7 15.3ZM12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22Z" fill="#FA793C"/>
+                </svg>
+                
+              </div>
+            </div>
+            
+            <div class="line mt-8"></div>
+    
+            <p class="blog-title mt-20">
+              TRAVEL NEWS
+            </p>
+    
+            <p class="blog-content mt-8">
+              Lorem ipsum dolor sit amet consectetur. 
+              Lectus diam turpis condimentum convallis in. 
+              Ac lorem cras laoreet proin suscipit tempor nibh fermentum.
+            </p>
+    
+            <p class="blog-title mt-8">
+              TRAVEL NEWS
+            </p>
+    
+            <p class="blog-content mt-8">
+              Lorem ipsum dolor sit amet consectetur. 
+              Lectus diam turpis condimentum convallis in. 
+              Ac lorem cras laoreet proin suscipit tempor nibh fermentum.
+            </p>
+    
+          </div>
+        </div>
+      </div>
+      
+
+
+
+    </header>
+
+
+    <section class="col-lg-none">
+      <div class="content">
+        <h1 class="heading mtb-34">
+          PHOTOGRAPH
+        </h1>
+
+        <div class="line"></div>
+        
+
+        <div class="row">
+          <div class="col-md-6 col-lg-none col-sm-12 card-slider pr-30">
+            <p class="blog-title mt-20">TRAVEL NEWS</p>
+            <p class="blog-content mt-8"> Lorem ipsum dolor sit amet consectetur. Lectus diam turpis condimentum convallis in. Ac lorem cras laoreet proin suscipit tempor nibh fermentum. </p>
+          </div>
+          <div class="col-md-6 col-lg-none col-sm-12 card-slider pr-30">
+            <p class="blog-title mt-20">TRAVEL NEWS</p>
+            <p class="blog-content mt-8"> Lorem ipsum dolor sit amet consectetur. Lectus diam turpis condimentum convallis in. Ac lorem cras laoreet proin suscipit tempor nibh fermentum. </p>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!---------------------------------------- STARTING BLOG SECTION ---------------------------------------->
+    <section>
+        <div class="content">
+            <h1 class="heading mtb-34">
+                Discovery
+            </h1>
+            <!-- STARTING CARD listing  -->
+            <div class="card-list">
+                <!-- CARD ITEMS -->
+                <div class="card-item">
+                    <img class="blog-image" src="images/1.jpg" alt="blog-1">
+                    <div class="blog-text">
+                        <p class="text-header m-0">
+                            Lorem ipsum dolor
+                        </p>
+                        <p class="text-content m-0">
+                            sit amet consectetur. Lectus diam turpis condimentum convallis in. Ac lorem cras laoreet proin suscipit tempor nibh fermentum.
+                        </p>
+                        <div class="row mt-5">
+                            <i class="fa fa-clock-o me-16"></i>
+                            <p class="m-0 text-content">2 day ago</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- CARD ITEMS -->
+                <div class="card-item">
+                    <img class="blog-image" src="images/2.jpg" alt="blog-1">
+                    <div class="blog-text">
+                        <p class="text-header m-0">
+                            Lorem ipsum dolor
+                        </p>
+                        <p class="text-content m-0">
+                            sit amet consectetur. Lectus diam turpis condimentum convallis in. Ac lorem cras laoreet proin suscipit tempor nibh fermentum.
+                        </p>
+                        <div class="row mt-5">
+                            <i class="fa fa-clock-o me-16"></i>
+                            <p class="m-0 text-content">2 day ago</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- CARD ITEMS -->
+                <div class="card-item">
+                    <img class="blog-image" src="images/3.jpg" alt="blog-1">
+                    <div class="blog-text">
+                        <p class="text-header m-0">
+                            Lorem ipsum dolor
+                        </p>
+                        <p class="text-content m-0">
+                            sit amet consectetur. Lectus diam turpis condimentum convallis in. Ac lorem cras laoreet proin suscipit tempor nibh fermentum.
+                        </p>
+                        <div class="row mt-5">
+                            <i class="fa fa-clock-o me-16"></i>
+                            <p class="m-0 text-content">2 day ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ENDED Card listing  -->
+        </div>
+    </section>
+    <!---------------------------------------- ENDED BLOG SECTION ---------------------------------------->
+
+
+
+
+    <!-- Section 2 Photography -->
+    <section>
+      <div class="content photo-area">
+
+        <h1 class="heading mtb-34">
+          PHOTOGRAPH
+        </h1>
+
+
+
+        <div class="row justify-between">
+          <div class="col-md-12 col-lg-8 col-sm-12 mr-20 mt-5">
+            <div>
+              <div class="left-content-photo mb-80">
+                <img src="images/4.jpg" alt="">
+                <p class="heading">HAPPENING NOW.</p>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur. Lectus diam turpis condimentum convallis in. Ac lorem cras laoreet proin suscipit tempor nibh fermentum ipsum dolor sit amet consectetur. Lectus diam turpis condimentum convallis in. Ac lorem cras laoreet proin suscipit tempor nibh fermentum.
+                </p>
+              </div>
+              <div class="left-content-photo mb-80">
+                <img src="images/5.jpg" alt="">
+                <p class="heading">HAPPENING NOW.</p>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur. Lectus diam turpis condimentum convallis in. Ac lorem cras laoreet proin suscipit tempor nibh fermentum ipsum dolor sit amet consectetur. Lectus diam turpis condimentum convallis in. Ac lorem cras laoreet proin suscipit tempor nibh fermentum.
+                </p>
+              </div>
+            </div>
+            
+          </div>
+          
+
+          <div class="col-md-12 col-lg-3 col-sm-12 mt-5">
+            <div class="flex-column">
+              <div class="card">
+                <img src="images/6.jpg" alt="">
+                <div class="photo-text">
+                  <p class="text-header m-0">
+                      Lorem ipsum dolor
+                  </p>
+                  <p class="text-content m-0">
+                      sit amet consectetur. Lectus diam turpis condimentum convallis in. Ac lorem cras laoreet proin suscipit tempor nibh fermentum.
+                  </p>
+                  <div class="row mt-5">
+                      <i class="fa fa-clock-o me-16"></i>
+                      <p class="m-0 text-content">2 day ago</p>
+                  </div>
+              </div>
+              </div>
+              
+
+              <div class="card">
+                <img src="images/6.jpg" alt="">
+                <div class="photo-text">
+                  <p class="text-header m-0">
+                      Lorem ipsum dolor
+                  </p>
+                  <p class="text-content m-0">
+                      sit amet consectetur. Lectus diam turpis condimentum convallis in. Ac lorem cras laoreet proin suscipit tempor nibh fermentum.
+                  </p>
+                  <div class="row mt-5">
+                      <i class="fa fa-clock-o me-16"></i>
+                      <p class="m-0 text-content">2 day ago</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="images/6.jpg" alt="">
+                <div class="photo-text">
+                  <p class="text-header m-0">
+                      Lorem ipsum dolor
+                  </p>
+                  <p class="text-content m-0">
+                      sit amet consectetur. Lectus diam turpis condimentum convallis in. Ac lorem cras laoreet proin suscipit tempor nibh fermentum.
+                  </p>
+                  <div class="row mt-5">
+                      <i class="fa fa-clock-o me-16"></i>
+                      <p class="m-0 text-content">2 day ago</p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+      
+    </section>
+
+    <footer class="mt-70">
+      <div class="flex-justify-center pt-36 pb-36">
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24.2408 29.925C22.7208 31.5083 20.9792 33.1391 19 34.8333C10.5608 27.6291 6.33333 21.4066 6.33333 16.15C6.33333 8.26496 12.35 3.16663 19 3.16663C25.3333 3.16663 31.0967 7.78996 31.6192 15.0416H37.2083L30.0833 22.1666L22.9583 15.0416H28.4525C27.9458 9.87996 23.9558 6.33329 19 6.33329C13.6958 6.33329 9.49999 10.4025 9.49999 16.15C9.49999 19.855 12.5875 24.7633 19 30.6216C20.0133 29.6875 20.9475 28.785 21.8025 27.9141C21.5239 27.3644 21.3775 26.7571 21.375 26.1408C21.375 25.091 21.792 24.0842 22.5344 23.3418C23.2767 22.5995 24.2835 22.1825 25.3333 22.1825C26.3831 22.1825 27.39 22.5995 28.1323 23.3418C28.8746 24.0842 29.2917 25.091 29.2917 26.1408C29.2911 26.7531 29.1481 27.3568 28.8739 27.9043C28.5997 28.4517 28.2018 28.9278 27.7118 29.295C27.2218 29.6621 26.6531 29.9101 26.0506 30.0195C25.4482 30.1288 24.8286 30.0965 24.2408 29.925Z" fill="white"/>
+        </svg>
+        <p class="footer-text align-center">
+          Travel Day.com
+        </p>  
+      </div>
+    </footer>
+</body>
+</html>
